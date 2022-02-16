@@ -49,36 +49,24 @@ document.getElementById("btn3").onclick = function () {
   resutlBai3(giaithua);
 };
 
-
 //bài 4
 
 document.getElementById("btn4").onclick = function () {
-  
-  for(i=0; i < 10; i++) {
-    const parentDiv = document.createElement('div');
-    document.getElementById('parent').appendChild(parentDiv);
-    // const childDiv = document.getElementById("parent").getElementsByTagName("div");
-    // for (var i = 0; i < childDiv.length; i++){
-    //     if ((i + 1) % 2 == 0){
-    //       childDiv[i].style.background = "red";
-          
-    //     }
-    //     else {
-    //       childDiv[i].style.background = "blue";
-    //     }
-    // }
+  for (i = 0; i <= 10; i++) {
+    const parentDiv = document.createElement("div");
+    document.getElementById("parent").appendChild(parentDiv);
+  }
+  const childDiv = document
+    .getElementById("parent")
+    .getElementsByTagName("div");
+  for (var i = 1; i < childDiv.length; i++) {
+    if ((i + 1) % 2 == 0) {
+      childDiv[i].innerHTML = `Div chẵn ${i}`;
+      childDiv[i].style.background = "blue";
 
+    } else {
+      childDiv[i].innerHTML = `Div lẻ ${i}`;
+      childDiv[i].style.background = "red";
     }
+  }
 };
-document.getElementById("btn5").onclick = function(){
-  const childDiv = document.getElementById("parent").getElementsByTagName("div");
-    for (var i = 0; i < childDiv.length; i++){
-        if ((i + 1) % 2 == 0){
-          childDiv[i].style.background = "red";
-          
-        }
-        else {
-          childDiv[i].style.background = "blue";
-        }
-    }
-}
